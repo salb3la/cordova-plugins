@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2012-2014, Pierre-Olivier Latour
+ Copyright (c) 2012-2019, Pierre-Olivier Latour
  All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
@@ -25,46 +25,28 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-#import "AppDelegate.h"
+// GCDWebServer Core
+#import "GCDWebServer.h"
+#import "GCDWebServerConnection.h"
+#import "GCDWebServerFunctions.h"
+#import "GCDWebServerHTTPStatusCodes.h"
+#import "GCDWebServerResponse.h"
+#import "GCDWebServerRequest.h"
+
+// GCDWebServer Requests
+#import "GCDWebServerDataRequest.h"
+#import "GCDWebServerFileRequest.h"
+#import "GCDWebServerMultiPartFormRequest.h"
+#import "GCDWebServerURLEncodedFormRequest.h"
+
+// GCDWebServer Responses
+#import "GCDWebServerDataResponse.h"
+#import "GCDWebServerErrorResponse.h"
+#import "GCDWebServerFileResponse.h"
+#import "GCDWebServerStreamedResponse.h"
+
+// GCDWebUploader
 #import "GCDWebUploader.h"
 
-@interface AppDelegate () <GCDWebUploaderDelegate> {
-@private
-  GCDWebUploader* _webServer;
-}
-@end
-
-@implementation AppDelegate
-
-- (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions {
-  CGRect bounds = ([UIScreen instancesRespondToSelector:@selector(nativeBounds)] ? [[UIScreen mainScreen] nativeBounds] : [[UIScreen mainScreen] bounds]);
-  _window = [[UIWindow alloc] initWithFrame:bounds];
-  _window.backgroundColor = [UIColor whiteColor];
-  [_window makeKeyAndVisible];
-  
-  NSString* documentsPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) firstObject];
-  _webServer = [[GCDWebUploader alloc] initWithUploadDirectory:documentsPath];
-  _webServer.delegate = self;
-  _webServer.allowHiddenItems = YES;
-  [_webServer start];
-  
-  return YES;
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didUploadFileAtPath:(NSString*)path {
-  NSLog(@"[UPLOAD] %@", path);
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didMoveItemFromPath:(NSString*)fromPath toPath:(NSString*)toPath {
-  NSLog(@"[MOVE] %@ -> %@", fromPath, toPath);
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didDeleteItemAtPath:(NSString*)path {
-  NSLog(@"[DELETE] %@", path);
-}
-
-- (void)webUploader:(GCDWebUploader*)uploader didCreateDirectoryAtPath:(NSString*)path {
-  NSLog(@"[CREATE] %@", path);
-}
-
-@end
+// GCDWebDAVServer
+#import "GCDWebDAVServer.h"

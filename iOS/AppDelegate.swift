@@ -1,7 +1,7 @@
 /*
- Copyright (c) 2012-2014, Pierre-Olivier Latour
+ Copyright (c) 2012-2019, Pierre-Olivier Latour
  All rights reserved.
- 
+
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions are met:
  * Redistributions of source code must retain the above copyright
@@ -12,7 +12,7 @@
  * The name of Pierre-Olivier Latour may not be used to endorse
  or promote products derived from this software without specific
  prior written permission.
- 
+
  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND
  ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
  WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
@@ -25,106 +25,9 @@
  SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
 
-.row-file {
-  height: 40px;
-}
+import UIKit
 
-.column-icon {
-  width: 40px;
-  text-align: center;
-}
-
-.column-name {
-}
-
-.column-size {
-  width: 100px;
-  text-align: right;
-}
-
-.column-move {
-  width: 40px;
-  text-align: center;
-}
-
-.column-delete {
-  width: 40px;
-  text-align: center;
-}
-
-.column-path {  
-}
-
-.column-progress {
-  width: 200px;
-}
-
-.footer {
-  color: #999;
-  text-align: center;
-  font-size: 0.9em;
-}
-
-#reload {
-  float: right;
-}
-
-#create-input {
-  width: 50%;
-  height: 20px;
-}
-
-#move-input {
-  width: 80%;
-  height: 20px;
-}
-
-/* Bootstrap overrides */
-
-.btn:focus {
-  outline: none;  /* FIXME: Work around for Chrome only but still draws focus ring while button pressed */
-}
-
-.btn-toolbar {
-  margin-top: 30px;
-  margin-bottom: 20px;
-}
-
-.table .progress {
-  margin-top: 0px;
-  margin-bottom: 0px;
-  height: 16px;
-}
-
-.panel-default > .panel-heading {
-  color: #555;
-}
-
-.breadcrumb {
-  background-color: transparent;
-  border-radius: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-}
-
-.breadcrumb > .active {
-  color: #555;
-}
-
-.breadcrumb > li + li:before {
-  color: #999;
-}
-
-.table > tbody > tr > td {
-  vertical-align: middle;
-}
-
-.table > tbody > tr > td > p {
-  margin: 0px;
-}
-
-/* Initial state */
-
-.uploading {
-  display: none;
+@UIApplicationMain
+class AppDelegate: UIResponder, UIApplicationDelegate {
+  var window: UIWindow?
 }
