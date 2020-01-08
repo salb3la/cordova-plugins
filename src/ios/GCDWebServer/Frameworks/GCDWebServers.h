@@ -1,5 +1,5 @@
 /*
- Copyright (c) 2012-2015, Pierre-Olivier Latour
+ Copyright (c) 2012-2019, Pierre-Olivier Latour
  All rights reserved.
  
  Redistribution and use in source and binary forms, with or without
@@ -26,27 +26,27 @@
  */
 
 // GCDWebServer Core
-#import <GCDWebServers/GCDWebServer.h>
-#import <GCDWebServers/GCDWebServerConnection.h>
-#import <GCDWebServers/GCDWebServerFunctions.h>
-#import <GCDWebServers/GCDWebServerHTTPStatusCodes.h>
-#import <GCDWebServers/GCDWebServerResponse.h>
-#import <GCDWebServers/GCDWebServerRequest.h>
+#import "GCDWebServer.h"
+#import "GCDWebServerConnection.h"
+#import "GCDWebServerFunctions.h"
+#import "GCDWebServerHTTPStatusCodes.h"
+#import "GCDWebServerResponse.h"
+#import "GCDWebServerRequest.h"
 
 // GCDWebServer Requests
-#import <GCDWebServers/GCDWebServerDataRequest.h>
-#import <GCDWebServers/GCDWebServerFileRequest.h>
-#import <GCDWebServers/GCDWebServerMultiPartFormRequest.h>
-#import <GCDWebServers/GCDWebServerURLEncodedFormRequest.h>
+#import "GCDWebServerDataRequest.h"
+#import "GCDWebServerFileRequest.h"
+#import "GCDWebServerMultiPartFormRequest.h"
+#import "GCDWebServerURLEncodedFormRequest.h"
 
 // GCDWebServer Responses
-#import <GCDWebServers/GCDWebServerDataResponse.h>
-#import <GCDWebServers/GCDWebServerErrorResponse.h>
-#import <GCDWebServers/GCDWebServerFileResponse.h>
-#import <GCDWebServers/GCDWebServerStreamedResponse.h>
+#import "GCDWebServerDataResponse.h"
+#import "GCDWebServerErrorResponse.h"
+#import "GCDWebServerFileResponse.h"
+#import "GCDWebServerStreamedResponse.h"
 
 // GCDWebUploader
-#import <GCDWebServers/GCDWebUploader.h>
+#import "GCDWebUploader.h"
 
 // GCDWebDAVServer
-#import <GCDWebServers/GCDWebDAVServer.h>
+#import "GCDWebDAVServer.h"
