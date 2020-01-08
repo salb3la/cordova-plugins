@@ -32,8 +32,8 @@
     <!-- ios -->
     <platform name="ios">
 
-    <hook type="after_plugin_install" src="scripts/after_install.js" />
-    <hook type="before_plugin_uninstall" src="scripts/before_uninstall.js" />
+    <!-- <hook type="after_plugin_install" src="scripts/after_install.js" />
+    <hook type="before_plugin_uninstall" src="scripts/before_uninstall.js" /> -->
 
         <config-file target="config.xml" parent="/*">
 		    <feature name="CordovaLocalWebServer">
